@@ -1,4 +1,3 @@
-// Triangle Area Calculation
 document.getElementById("triangle-base").addEventListener("input", calculateTriangleArea);
 document.getElementById("triangle-height").addEventListener("input", calculateTriangleArea);
 function calculateTriangleArea() {
@@ -8,7 +7,6 @@ function calculateTriangleArea() {
     document.getElementById("triangle-result").textContent = area.toFixed(2);
 }
 
-// Rectangle Area Calculation
 document.getElementById("rectangle-width").addEventListener("input", calculateRectangleArea);
 document.getElementById("rectangle-length").addEventListener("input", calculateRectangleArea);
 function calculateRectangleArea() {
@@ -18,7 +16,6 @@ function calculateRectangleArea() {
     document.getElementById("rectangle-result").textContent = area.toFixed(2);
 }
 
-// Circle Area Calculation
 document.getElementById("circle-radius").addEventListener("input", calculateCircleArea);
 function calculateCircleArea() {
     const radius = parseFloat(document.getElementById("circle-radius").value) || 0;
@@ -26,7 +23,6 @@ function calculateCircleArea() {
     document.getElementById("circle-result").textContent = area.toFixed(2);
 }
 
-// Circle Circumference Calculation
 document.getElementById("circumference-radius").addEventListener("input", calculateCircumference);
 function calculateCircumference() {
     const radius = parseFloat(document.getElementById("circumference-radius").value) || 0;
@@ -34,7 +30,6 @@ function calculateCircumference() {
     document.getElementById("circumference-result").textContent = circumference.toFixed(2);
 }
 
-// Trapezoid Area Calculation
 document.getElementById("trapezoid-a").addEventListener("input", calculateTrapezoidArea);
 document.getElementById("trapezoid-b").addEventListener("input", calculateTrapezoidArea);
 document.getElementById("trapezoid-height").addEventListener("input", calculateTrapezoidArea);

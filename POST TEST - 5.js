@@ -3,13 +3,11 @@ function compareObjects() {
     const resultElement = document.getElementById("result");
 
     try {
-        // แปลง Input เป็น Array ของ Object
         const objects = input
             .trim()
-            .split(/\n/) // แยกแต่ละบรรทัด
-            .map((line) => eval(`(${line})`)); // ใช้ eval เพื่อแปลงเป็น Object
+            .split(/\n/)
+            .map((line) => eval(`(${line})`));
 
-        // ตรวจสอบ Column ซ้ำ
         const columnValues = {};
         let hasDuplicateColumn = false;
 
@@ -25,7 +23,6 @@ function compareObjects() {
             }
         });
 
-        // ตรวจสอบ Row ซ้ำ
         const rowSet = new Set();
         let hasDuplicateRow = false;
 
@@ -37,7 +34,6 @@ function compareObjects() {
             rowSet.add(rowString);
         });
 
-        // แสดงผลลัพธ์
         const columnResult = `Object Duplicate Column: ${hasDuplicateColumn ? "True" : "False"}`;
         const rowResult = `Object Duplicate Row: ${hasDuplicateRow ? "True" : "False"}`;
         console.log(columnResult);

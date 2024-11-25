@@ -14,7 +14,6 @@ const jsonData = {
     "house": ["Gryffindor", "Ravenclaw", "Slytherin", "Hufflepuff"]
 };
 
-// Populate house options
 const houseSelect = document.getElementById('house-select');
 jsonData.house.forEach(house => {
     const option = document.createElement('option');
@@ -23,7 +22,6 @@ jsonData.house.forEach(house => {
     houseSelect.appendChild(option);
 });
 
-// Display students in table
 const studentTableBody = document.querySelector('#student-table tbody');
 function displayStudents(students) {
     studentTableBody.innerHTML = '';
@@ -40,7 +38,6 @@ function displayStudents(students) {
     });
 }
 
-// Filter students by house
 houseSelect.addEventListener('change', () => {
     const selectedHouse = houseSelect.value;
     if (selectedHouse === 'All') {
@@ -51,15 +48,12 @@ houseSelect.addEventListener('change', () => {
     }
 });
 
-// Clear table
 document.getElementById('clear-btn').addEventListener('click', () => {
     studentTableBody.innerHTML = '';
 });
 
-// Refresh table
 document.getElementById('refresh-btn').addEventListener('click', () => {
     displayStudents(jsonData.students);
 });
 
-// Initial display
 displayStudents(jsonData.students);
